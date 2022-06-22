@@ -1,3 +1,4 @@
+//first version
 const a = "abc"; //string
 
 let c = 32;  //number
@@ -50,6 +51,89 @@ const obj = {  //object
 const arr2 = [[[[[[[[[[[[[[[5]]]]]]]]]]]]]]]
 console.log(arr2[0][0][0][0][0][0][0][0][0][0][0][0][0][0][0])
 
+// SECOND VERSION
+
+/*
+многострочник комментарий
+*/
+
+var num1 = Number.parseInt(prompt('Enter number 1: '));
+var num2 = Number.parseInt(prompt('Enter number 2: '));
+console.log('First number:', num1);
+console.log('First number:', num2);
+console.log('+', num1 + num2);
+//весь код выше можно прописать на одну строчку как ниже
+// var num1=Number.parseInt(prompt('Enter number 1: '));var num2=Number.parseInt(prompt('Enter number 2: '));console.log('First number:',num1);console.log('First number:',num2);console.log('+',num1+num2)
+
+console.log('isFinite 5', isFinite(5));
+console.log('isFinite Infinity', isFinite(Infinity));
+console.log('isNaN NaN', isNaN(NaN));
 
 
+//boolean
+var isProgrammer = true;
+var isLead = false;
+//нестрогое сравнение - non strict
+console.log('==', 5 == '5');
+console.log('!=', 5 != 7);
+//строгое сравнение - strict
+console.log('===', 5 === '5');
+console.log('!==', 5 !== 7);
+//и так далее <, >, <=, >=
 
+var name = 'Max';
+var age = 525;
+
+if (age < 0 || age > 150) {    // || означает  "и" ,типо and
+    console.log('Invalid age');
+    console.log(age);
+} else if (age > 0 || age < 18) {
+    console.log('Hi', name);
+} else if (age >= 18 && age <= 35) {   // && ознает "или", типо or
+    console.log('Hello', name);
+} else {
+    console.log('Welcome, dear', name);
+}
+
+//string
+var ivan = 'Ivan';
+//конкатенация(сложение строк)
+var message = 'Hello, ' + "\ndear " + ivan;
+//интерполяция
+var message2 = `Hello, dear ${ivan}`;
+console.log(message);
+console.log(message2);
+
+//escaping - экранирование
+var path = 'C:\\Code\\"JavaScript1"\\lesson1';
+console.log(path);
+//------------------------------------------------------------------------
+var size = "M";
+var euSize = 0;
+if (size === "S") {
+    euSize = 36;
+} else if (size === 'M') {
+    euSize = 42;
+} else if (size === "L") {
+    euSize = 48;
+} else {
+    euSize = 1;
+}
+console.log('europiean size', euSize)
+//упрощенная версия кода выше
+switch (size) {
+    case 's':
+    case 'S':
+        console.log('Small');
+        break;
+    case 'm':
+    case 'M':
+        console.log('Medium');
+        break;                      //завершает выполнение ветки
+    case 'l':
+    case 'L':
+        console.log('Large');
+        break;
+    default:
+        console.log('Unknown size')
+}
